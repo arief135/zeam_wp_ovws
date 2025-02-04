@@ -1,129 +1,410 @@
 {
-  "_version": "1.60.0",
-  "sap.app": {
-    "id": "com.essa.zeamwpovws",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "0.0.1"
+    "_version": "1.60.0",
+    "sap.app": {
+        "id": "com.essa.zeamwpovws",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{app_title}}",
+        "description": "{{app_description}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:ovp",
+            "version": "1.14.5",
+            "toolsId": "3fcae89c-375f-42af-8646-ebd46248d926"
+        },
+        "dataSources": {
+            "UI_PERMITTOWORKOVERVIEW": {
+                "uri": "/sap/opu/odata/sap/UI_PERMITTOWORKOVERVIEW/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "UI_PERMITTOWORKOVERVIEW_VAN"
+                    ],
+                    "localUri": "localService/UI_PERMITTOWORKOVERVIEW/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "UI_PERMITTOWORKOVERVIEW_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='UI_PERMITTOWORKOVERVIEW_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/UI_PERMITTOWORKOVERVIEW/UI_PERMITTOWORKOVERVIEW_VAN.xml"
+                }
+            },
+            "ZC_WPFILLQRY_CDS": {
+                "uri": "/sap/opu/odata/sap/ZC_WPFILLQRY_CDS/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZC_WPFILLQRY_CDS_VAN"
+                    ],
+                    "localUri": "localService/ZC_WPFILLQRY_CDS/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZC_WPFILLQRY_CDS_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_WPFILLQRY_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZC_WPFILLQRY_CDS/ZC_WPFILLQRY_CDS_VAN.xml"
+                }
+            },
+            "ZC_SCFILLQRY_CDS": {
+                "uri": "/sap/opu/odata/sap/ZC_SCFILLQRY_CDS/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZC_SCFILLQRY_CDS_VAN"
+                    ],
+                    "localUri": "localService/ZC_SCFILLQRY_CDS/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZC_SCFILLQRY_CDS_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_SCFILLQRY_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZC_SCFILLQRY_CDS/ZC_SCFILLQRY_CDS_VAN.xml"
+                }
+            },
+            "ZC_WPCMPLQRY_CDS": {
+                "uri": "/sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZC_WPCMPLQRY_CDS_VAN"
+                    ],
+                    "localUri": "localService/ZC_WPCMPLQRY_CDS/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZC_WPCMPLQRY_CDS_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_WPCMPLQRY_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZC_WPCMPLQRY_CDS/ZC_WPCMPLQRY_CDS_VAN.xml"
+                }
+            },
+            "ZC_SCCMPLQRY_CDS": {
+                "uri": "/sap/opu/odata/sap/ZC_SCCMPLQRY_CDS/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZC_SCCMPLQRY_CDS_VAN"
+                    ],
+                    "localUri": "localService/ZC_SCCMPLQRY_CDS/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZC_SCCMPLQRY_CDS_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_SCCMPLQRY_CDS_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZC_SCCMPLQRY_CDS/ZC_SCCMPLQRY_CDS_VAN.xml"
+                }
+            }
+        }
     },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "resources": "resources.json",
-    "sourceTemplate": {
-      "id": "@sap/generator-fiori:ovp",
-      "version": "1.14.5",
-      "toolsId": "3fcae89c-375f-42af-8646-ebd46248d926"
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
     },
-    "dataSources": {
-      "mainService": {
-        "uri": "/sap/opu/odata/sap/UI_PERMITTOWORKOVERVIEW/",
-        "type": "OData",
-        "settings": {
-          "annotations": [
-            "UI_PERMITTOWORKOVERVIEW_VAN",
-            "annotation"
-          ],
-          "localUri": "localService/metadata.xml",
-          "odataVersion": "2.0"
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.120.19",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.f": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ovp": {},
+                "sap.ui.rta": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "UI_PERMITTOWORKOVERVIEW": {
+                "dataSource": "UI_PERMITTOWORKOVERVIEW",
+                "preload": true,
+                "settings": {
+                    "defaultCountMode": "None",
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "ZC_WPFILLQRY_CDS": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultCountMode": "Inline"
+                },
+                "dataSource": "ZC_WPFILLQRY_CDS",
+                "preload": true
+            },
+            "ZC_WPCMPLQRY_CDS": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultCountMode": "Inline"
+                },
+                "dataSource": "ZC_WPCMPLQRY_CDS",
+                "preload": true
+            },
+            "ZC_SCFILLQRY_CDS": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultCountMode": "Inline"
+                },
+                "dataSource": "ZC_SCFILLQRY_CDS",
+                "preload": true
+            },
+            "ZC_SCCMPLQRY_CDS": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultCountMode": "Inline"
+                },
+                "dataSource": "ZC_SCCMPLQRY_CDS",
+                "preload": true
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "config": {},
+            "routes": [],
+            "targets": {}
         }
-      },
-      "UI_PERMITTOWORKOVERVIEW_VAN": {
-        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='UI_PERMITTOWORKOVERVIEW_VAN',Version='0001')/$value/",
-        "type": "ODataAnnotation",
-        "settings": {
-          "localUri": "localService/UI_PERMITTOWORKOVERVIEW_VAN.xml"
+    },
+    "sap.ovp": {
+        "globalFilterModel": "UI_PERMITTOWORKOVERVIEW",
+        "globalFilterEntitySet": "PmtToWrkOverviewPageFilter",
+        "enableLiveFilter": false,
+        "considerAnalyticalParameters": true,
+        "containerLayout": "resizable",
+        "cards": {
+            "card00": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "{{OpenWorkPermitsCardTitle}}",
+                    "subTitle": "{{WorkPermitTypeSubTitle}}",
+                    "entitySet": "WorkPermitType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#NumberOfOpenWorkPermits",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "addODataSelect": true
+                }
+            },
+            "card01": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "{{OpenWorkPermitsCardTitle}}",
+                    "subTitle": "{{ProcessingStatusSubTitle}}",
+                    "entitySet": "WorkPermitProcessingStatus",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByProcessingStatus",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "addODataSelect": true
+                }
+            },
+            "card02": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "{{OpenWorkPermitsCardTitle}}",
+                    "subTitle": "{{WorkCenterSubTitle}}",
+                    "entitySet": "WorkPermitWorkCenter",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkCenter",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card03": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "{{OpensafetyCertificateCardTitle}}",
+                    "subTitle": "{{CertificateTypeSubTitle}}",
+                    "entitySet": "SafetyCertificateTypeCard",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#NumberOfOpenSftyCert",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "addODataSelect": true
+                }
+            },
+            "card04": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "{{OpensafetyCertificateCardTitle}}",
+                    "subTitle": "{{ProcessingStatusSubTitle}}",
+                    "entitySet": "SftyCertProcessingStatus",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCByProcessingStatus",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "addODataSelect": true
+                }
+            },
+            "card05": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "{{OpensafetyCertificateCardTitle}}",
+                    "subTitle": "{{WorkCenterSubTitle}}",
+                    "entitySet": "SftyCertWorkCenter",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCByWorkCenter",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card06": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Work Permit To Be Closed",
+                    "subTitle": "By Work Permit Type",
+                    "entitySet": "WorkPermitTypeToBeClosed",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card07": {
+                "model": "UI_PERMITTOWORKOVERVIEW",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Safety Certificate To Be Closed",
+                    "subTitle": "By Safety Certificate Type",
+                    "entitySet": "SafetyCertTypeToBeClosed",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card08": {
+                "model": "ZC_WPFILLQRY_CDS",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Work Permit Fulfillment (%)",
+                    "subTitle": "By Work Permit Type",
+                    "entitySet": "ZC_WPFILLQRY",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card09": {
+                "model": "ZC_SCFILLQRY_CDS",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Safety Certificate Fulfillment (%)",
+                    "subTitle": "By Safety Certificate Type",
+                    "entitySet": "ZC_SCFILLQRY",
+                    "listType": "extended",
+                    "listFlavor": "bar",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card10": {
+                "model": "ZC_WPCMPLQRY_CDS",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Work Permit Completion (%)",
+                    "subTitle": "By Work Permit Type",
+                    "entitySet": "ZC_WPCMPLQRY",
+                    "listType": "extended",
+                    "listFlavor": "bar",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            },
+            "card11": {
+                "model": "ZC_SCCMPLQRY_CDS",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Safety Certificate Completion (%)",
+                    "subTitle": "By Safety Certificate Type",
+                    "entitySet": "ZC_SCCMPLQRY",
+                    "listType": "extended",
+                    "listFlavor": "bar",
+                    "addODataSelect": true,
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
+                    "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                }
+            }
         }
-      },
-      "annotation": {
-        "type": "ODataAnnotation",
-        "uri": "annotations/annotation.xml",
-        "settings": {
-          "localUri": "annotations/annotation.xml"
-        }
-      }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "analytical"
     }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": true,
-    "dependencies": {
-      "minUI5Version": "1.120.19",
-      "libs": {
-        "sap.m": {},
-        "sap.ui.core": {},
-        "sap.ushell": {},
-        "sap.f": {},
-        "sap.ui.comp": {},
-        "sap.ui.generic.app": {},
-        "sap.suite.ui.generic.template": {},
-        "sap.ovp": {},
-        "sap.ui.rta": {},
-        "sap.ui.layout": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "com.essa.zeamwpovws.i18n.i18n"
-        }
-      },
-      "mainModel": {
-        "dataSource": "mainService",
-        "preload": true,
-        "settings": {
-          "defaultBindingMode": "TwoWay",
-          "defaultCountMode": "Inline",
-          "refreshAfterChange": false,
-          "metadataUrlParams": {
-            "sap-value-list": "none"
-          }
-        }
-      },
-      "@i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "uri": "i18n/i18n.properties"
-      }
-    },
-    "resources": {
-      "css": []
-    },
-    "routing": {
-      "config": {},
-      "routes": [],
-      "targets": {}
-    }
-  },
-  "sap.ovp": {
-    "globalFilterModel": "mainModel",
-    "globalFilterEntityType": "PmtToWrkOverviewPageFilterType",
-    "containerLayout": "resizable",
-    "enableLiveFilter": true,
-    "considerAnalyticalParameters": false,
-    "cards": {}
-  },
-  "sap.fiori": {
-    "registrationIds": [],
-    "archeType": "analytical"
-  }
 }

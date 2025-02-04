@@ -23,30 +23,20 @@ framework:
     - name: themelib_sap_horizon
 server:
   customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /sap/opu/odata/sap/ZC_SCCMPLQRY_CDS/
+            url: https://vhpuadwdwd01.sap.essa.id:44380
+            client: "110"
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
         port: 35729
         path: webapp
         delay: 300
-    - name: fiori-tools-proxy
-      afterMiddleware: compression
-      configuration:
-        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
-        backend:
-          - path: /sap
-            url: https://vhpuadwdwd01.sap.essa.id:44380
-            client: '110'
-    - name: sap-fe-mockserver
-      beforeMiddleware: csp
-      configuration:
-        mountPath: /
-        services:
-          - urlPath: /sap/opu/odata/sap/UI_PERMITTOWORKOVERVIEW
-            metadataPath: ./webapp/localService/metadata.xml
-            mockdataPath: ./webapp/localService/data
-            generateMockData: true
-        annotations: []
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:

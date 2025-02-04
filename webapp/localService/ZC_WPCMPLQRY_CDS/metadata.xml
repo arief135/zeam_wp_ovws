@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZC_WPCMPLQRY_CDS" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZC_WPCMPLQRYType" sap:label="Work Permit Completion Query" sap:semantics="aggregate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:filterable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TotaledProperties" Type="Edm.String" sap:aggregation-role="totaled-properties-list" sap:is-annotation="true" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitType" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Usage" sap:quickinfo="Usage of WCM Object" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="WorkPermitTypeDescription" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Work Permit Usg Desc" sap:quickinfo="Work Permit Usage Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MaintenancePlant" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="Maintenance Plant" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MaintOrdPersonResponsible" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:label="Person Resp. ID" sap:quickinfo="Person Responsible ID" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="AssetLocation" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Location" sap:quickinfo="Location of maintenance object" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="PERCENTAGE" sap:creatable="false" sap:updatable="false" sap:value-list="standard" sap:semantics="unit-of-measure"/>
+                <Property Name="Period" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Valid from" sap:quickinfo="Valid-From Date for WCM Object" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
+                <Property Name="Period_T" Type="Edm.String" MaxLength="10" sap:label="Valid from (Description)" sap:quickinfo="Valid-From Date for WCM Object" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Plant Section" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="Work Center" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:label="Application" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="TechnicalObjectLabel" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Technical Object" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="MaintenancePlanningPlant" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="Planning Plant" sap:quickinfo="Maintenance Planning Plant" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="WorkPermitProcessingStatus" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="Processing State" sap:quickinfo="Specifies Overall Processing State of the Work Permit" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="MaintenancePlannerGroup" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Maint. Planner Group" sap:quickinfo="Planner Group for Customer Service and Plant Maintenance" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="TechObjAuthorizationGroup" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:label="AuthorizGroup" sap:quickinfo="Technical Object Authorization Group" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="TechObjIsEquipOrFuncnlLoc" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:label="Tech. Obj. Type" sap:quickinfo="Technical Object Type" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="OperationWorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="Object ID" sap:quickinfo="Object ID of the resource" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="WorkPermitProcessingStatusText" Type="Edm.String" MaxLength="60" sap:aggregation-role="dimension" sap:label="Short Description" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="NumberOfOpenWorkPermits" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="NumberOfOpenWorkPermits_F" sap:updatable="false" sap:label="No. of Work Permits" sap:quickinfo="Number of Open Work Permits" sap:creatable="false"/>
+                <Property Name="NumberOfOpenWorkPermits_F" Type="Edm.String" MaxLength="60" sap:label="No. of Work Permits (Formatted)" sap:quickinfo="Number of Open Work Permits" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="NumberOfActCmplWorkPermits" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="NumberOfActCmplWorkPermits_F" sap:updatable="false" sap:label="No. of Work Permits" sap:quickinfo="Number of Open Work Permits" sap:creatable="false"/>
+                <Property Name="NumberOfActCmplWorkPermits_F" Type="Edm.String" MaxLength="60" sap:label="No. of Work Permits (Formatted)" sap:quickinfo="Number of Open Work Permits" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="NumberOfActRtrnWorkPermits" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="NumberOfActRtrnWorkPermits_F" sap:updatable="false" sap:label="No. of Work Permits" sap:quickinfo="Number of Open Work Permits" sap:creatable="false"/>
+                <Property Name="NumberOfActRtrnWorkPermits_F" Type="Edm.String" MaxLength="60" sap:label="No. of Work Permits (Formatted)" sap:quickinfo="Number of Open Work Permits" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="PercentVarianceCmpl" Type="Edm.Decimal" Precision="42" Scale="2" sap:aggregation-role="measure" sap:filterable="false" sap:text="PercentVarianceCmpl_F" sap:updatable="false" sap:label="No label specified for select entry on position 0000000004" sap:creatable="false"/>
+                <Property Name="PercentVarianceCmpl_F" Type="Edm.String" MaxLength="60" sap:label="No label specified for select entry on position 0000000004 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="CmplCriticality" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="CmplCriticality_F" sap:updatable="false" sap:label="No label specified for select entry on position 0000000005" sap:creatable="false"/>
+                <Property Name="CmplCriticality_F" Type="Edm.String" MaxLength="60" sap:label="No label specified for select entry on position 0000000005 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="KPI" Type="Edm.Decimal" Precision="42" Scale="0" sap:aggregation-role="measure" sap:filterable="false" sap:text="KPI_F" sap:updatable="false" sap:label="No label specified for select entry on position 0000000006" sap:creatable="false"/>
+                <Property Name="KPI_F" Type="Edm.String" MaxLength="60" sap:label="No label specified for select entry on position 0000000006 (Formatted)" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Percentage" sap:label="PERCENTAGE (Master Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Percentage_ID"/>
+                </Key>
+                <Property Name="Percentage_ID" Type="Edm.String" Nullable="false" MaxLength="3" sap:text="PercentageText" sap:label="PERCENTAGE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="PercentageText" Type="Edm.String" sap:label="PERCENTAGE (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="PercentageResult" sap:label="PERCENTAGE (Booked Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Percentage"/>
+                </Key>
+                <Property Name="Percentage" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="PERCENTAGE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitType" Type="Edm.String" MaxLength="3" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitTypeDescription" Type="Edm.String" MaxLength="40" sap:label="Work Permit Usg Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlant" Type="Edm.String" MaxLength="4" sap:label="Maintenance Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintOrdPersonResponsible" Type="Edm.String" MaxLength="12" sap:label="Person Resp. ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="AssetLocation" Type="Edm.String" MaxLength="10" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechnicalObjectLabel" Type="Edm.String" MaxLength="40" sap:label="Technical Object" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlanningPlant" Type="Edm.String" MaxLength="4" sap:label="Planning Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatus" Type="Edm.String" MaxLength="4" sap:label="Processing State" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlannerGroup" Type="Edm.String" MaxLength="3" sap:label="Maint. Planner Group" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjAuthorizationGroup" Type="Edm.String" MaxLength="4" sap:label="AuthorizGroup" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjIsEquipOrFuncnlLoc" Type="Edm.String" MaxLength="20" sap:label="Tech. Obj. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="OperationWorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:label="Object ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatusText" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="WorkPermitProcessingStatus" sap:label="Processing State (Master Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkPermitProcessingStatus_ID"/>
+                </Key>
+                <Property Name="WorkPermitProcessingStatus_ID" Type="Edm.String" Nullable="false" MaxLength="4" sap:text="WorkPermitProcessingStatusText" sap:label="Processing State" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatusText" Type="Edm.String" sap:label="Processing State (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="WorkPermitProcessingStatusResult" sap:label="Processing State (Booked Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkPermitProcessingStatus"/>
+                </Key>
+                <Property Name="WorkPermitProcessingStatus" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Processing State" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitType" Type="Edm.String" MaxLength="3" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitTypeDescription" Type="Edm.String" MaxLength="40" sap:label="Work Permit Usg Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlant" Type="Edm.String" MaxLength="4" sap:label="Maintenance Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintOrdPersonResponsible" Type="Edm.String" MaxLength="12" sap:label="Person Resp. ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="AssetLocation" Type="Edm.String" MaxLength="10" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:label="PERCENTAGE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechnicalObjectLabel" Type="Edm.String" MaxLength="40" sap:label="Technical Object" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlanningPlant" Type="Edm.String" MaxLength="4" sap:label="Planning Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlannerGroup" Type="Edm.String" MaxLength="3" sap:label="Maint. Planner Group" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjAuthorizationGroup" Type="Edm.String" MaxLength="4" sap:label="AuthorizGroup" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjIsEquipOrFuncnlLoc" Type="Edm.String" MaxLength="20" sap:label="Tech. Obj. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="OperationWorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:label="Object ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatusText" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="TechObjIsEquipOrFuncnlLoc" sap:label="Tech. Obj. Type (Master Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="TechObjIsEquipOrFuncnlLoc_ID"/>
+                </Key>
+                <Property Name="TechObjIsEquipOrFuncnlLoc_ID" Type="Edm.String" Nullable="false" MaxLength="20" sap:text="TechObjIsEquipOrFuncnlLocText" sap:label="Tech. Obj. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjIsEquipOrFuncnlLocText" Type="Edm.String" sap:label="Tech. Obj. Type (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="TechObjIsEquipOrFuncnlLocResult" sap:label="Tech. Obj. Type (Booked Data)" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="TechObjIsEquipOrFuncnlLoc"/>
+                </Key>
+                <Property Name="TechObjIsEquipOrFuncnlLoc" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Tech. Obj. Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitType" Type="Edm.String" MaxLength="3" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitTypeDescription" Type="Edm.String" MaxLength="40" sap:label="Work Permit Usg Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlant" Type="Edm.String" MaxLength="4" sap:label="Maintenance Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintOrdPersonResponsible" Type="Edm.String" MaxLength="12" sap:label="Person Resp. ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="AssetLocation" Type="Edm.String" MaxLength="10" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:label="PERCENTAGE" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechnicalObjectLabel" Type="Edm.String" MaxLength="40" sap:label="Technical Object" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlanningPlant" Type="Edm.String" MaxLength="4" sap:label="Planning Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatus" Type="Edm.String" MaxLength="4" sap:label="Processing State" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MaintenancePlannerGroup" Type="Edm.String" MaxLength="3" sap:label="Maint. Planner Group" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="TechObjAuthorizationGroup" Type="Edm.String" MaxLength="4" sap:label="AuthorizGroup" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="OperationWorkCenterInternalID" Type="Edm.String" MaxLength="8" sap:label="Object ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkPermitProcessingStatusText" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="ODataQueryAdditionalMetadata" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ODataQueryMetadata"/>
+                </Key>
+                <Property Name="ODataQueryMetadata" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValue_Current" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ODataQueryMetadataValueAtDefine" Type="Edm.String" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZC_WPCMPLQRY_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_WPCMPLQRY" EntityType="ZC_WPCMPLQRY_CDS.ZC_WPCMPLQRYType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Percentage" EntityType="ZC_WPCMPLQRY_CDS.Percentage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="PercentageResults" EntityType="ZC_WPCMPLQRY_CDS.PercentageResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="WorkPermitProcessingStatus" EntityType="ZC_WPCMPLQRY_CDS.WorkPermitProcessingStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="WorkPermitProcessingStatusResults" EntityType="ZC_WPCMPLQRY_CDS.WorkPermitProcessingStatusResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="TechObjIsEquipOrFuncnlLoc" EntityType="ZC_WPCMPLQRY_CDS.TechObjIsEquipOrFuncnlLoc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="TechObjIsEquipOrFuncnlLocResults" EntityType="ZC_WPCMPLQRY_CDS.TechObjIsEquipOrFuncnlLocResult" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="AdditionalMetadata" EntityType="ZC_WPCMPLQRY_CDS.ODataQueryAdditionalMetadata" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="ZC_WPCMPLQRY_CDS.ZC_WPCMPLQRYType/Percentage" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="PERCENTAGE ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="Percentage"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Percentage"/>
+                                    <PropertyValue Property="ValueListProperty" String="Percentage_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PercentageText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_WPCMPLQRY_CDS.ZC_WPCMPLQRYType/WorkPermitProcessingStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Processing State ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="WorkPermitProcessingStatus"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="WorkPermitProcessingStatus"/>
+                                    <PropertyValue Property="ValueListProperty" String="WorkPermitProcessingStatus_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="WorkPermitProcessingStatusText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZC_WPCMPLQRY_CDS.ZC_WPCMPLQRYType/TechObjIsEquipOrFuncnlLoc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Tech. Obj. Type ( Master Data )"/>
+                        <PropertyValue Property="CollectionPath" String="TechObjIsEquipOrFuncnlLoc"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="TechObjIsEquipOrFuncnlLoc"/>
+                                    <PropertyValue Property="ValueListProperty" String="TechObjIsEquipOrFuncnlLoc_ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="TechObjIsEquipOrFuncnlLocText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://VHPUADWDWD01.SAP.ESSA.ID:44380/sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://VHPUADWDWD01.SAP.ESSA.ID:44380/sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
