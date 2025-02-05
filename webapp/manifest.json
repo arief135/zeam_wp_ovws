@@ -204,6 +204,24 @@
             "config": {},
             "routes": [],
             "targets": {}
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.ovp.app.Main": {
+                        "controllerName": "com.essa.zeamwpovws.ext.controller.OverViewPageExt"
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.ovp.app.Main": {
+                        "SmartFilterBarControlConfigurationExtension|PmtToWrkOverviewPageFilter": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.essa.zeamwpovws.ext.fragments.CustomPeriod",
+                            "type": "XML"
+                        }
+                    }
+                }
+            }
         }
     },
     "sap.ovp": {
