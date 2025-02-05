@@ -9,6 +9,7 @@ sap.ui.define([
         getCustomFilters: function () {
             /* This method returns a filter object to the OVP library. If there are multiple filters, they should 
             be clubbed into single Filter object. */
+
             const formatter = DateFormat.getDateInstance({ pattern: 'yyyyMMdd' })
 
             var dateFrom = this.oView.byId("CustomPeriod").getDateValue();
