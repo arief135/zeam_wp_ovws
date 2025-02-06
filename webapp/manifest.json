@@ -21,7 +21,8 @@
                 "type": "OData",
                 "settings": {
                     "annotations": [
-                        "UI_PERMITTOWORKOVERVIEW_VAN"
+                        "UI_PERMITTOWORKOVERVIEW_VAN",
+                        "annotation1"
                     ],
                     "localUri": "localService/UI_PERMITTOWORKOVERVIEW/metadata.xml",
                     "odataVersion": "2.0"
@@ -104,6 +105,13 @@
                 "type": "ODataAnnotation",
                 "settings": {
                     "localUri": "localService/ZC_SCCMPLQRY_CDS/ZC_SCCMPLQRY_CDS_VAN.xml"
+                }
+            },
+            "annotation1": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation1.xml",
+                "settings": {
+                    "localUri": "annotations/annotation1.xml"
                 }
             }
         }
