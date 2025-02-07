@@ -346,7 +346,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Card06"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Card06",
+                    "customParams": "Card06"
                 }
             },
             "card07": {

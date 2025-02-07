@@ -31,6 +31,7 @@ sap.ui.define([
                 return (new Filter(aFilters, true));
             }
         },
+
         getCustomAppStateDataExtension: function (oCustomData) {
             //the content of the custom field will be stored in the app state, so that it can be restored later, for example after a back navigation.
             //The developer has to ensure that the content of the field is stored in the object that is returned by this method.
@@ -41,6 +42,7 @@ sap.ui.define([
                 }
             }
         },
+        
         restoreCustomAppStateDataExtension: function (oCustomData) {
             //in order to restore the content of the custom field in the filter bar, for example after a back navigation,
             //an object with the content is handed over to this method. Now the developer has to ensure that the content of the custom filter is set to the control
@@ -50,6 +52,72 @@ sap.ui.define([
                     oCustomField1.setValue(oCustomData.CustomPeriod);
                 }
             }
+        },
+
+        onCustomParams: function (sCustomParams) {
+            if (sCustomParams == 'Card06') {
+                return this.paramCard06.bind(this);
+            }
+        },
+
+        getBasicParams(oNavigateParams, oSelectionVariantParams) {
+
+            const basicParams = []
+            const params = []
+    
+            basicParams.forEach(b => {
+                const selParam = oSelectionVariantParams.getSelectOption(b)
+    
+                if (oNavigateParams[b]) {
+                    params.push({
+                        path: b,
+                        operator: 'EQ',
+                        value1: oNavigateParams[b],
+                        value2: '',
+                        sign: 'I'
+                    })
+    
+                } else {
+                    if (selParam) {
+                        selParam.forEach(p => {
+                            params.push({
+                                path: b,
+                                operator: p.Option,
+                                value1: p.Low,
+                                value2: '',
+                                sign: p.Sign
+                            })
+                        })
+                    } else {
+                        params.push({
+                            path: b,
+                            operator: 'EQ',
+                            value1: '',
+                            value2: '',
+                            sign: 'I'
+                        })
+                    }
+                }
+            })
+
+            return params
+        },
+
+        paramCard06: function(oNavigateParams, oSelectionVariantParams) {
+            const params = []
+
+            const formatter = DateFormat.getDateInstance({ pattern: 'yyyyMMdd' })
+            var dateFrom = this.oView.byId("CustomPeriod").getDateValue();
+            var dateTo = this.oView.byId("CustomPeriod").getSecondDateValue();
+
+            params.push({
+                path: 'Period',
+                operator: 'EQ',
+                value1: `${formatter.format(dateFrom)}-${formatter.format(dateTo)}`,
+                sign: 'I'
+            })
+
+            return params
         }
     }
 });
