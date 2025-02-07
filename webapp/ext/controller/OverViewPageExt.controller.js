@@ -42,7 +42,7 @@ sap.ui.define([
                 }
             }
         },
-        
+
         restoreCustomAppStateDataExtension: function (oCustomData) {
             //in order to restore the content of the custom field in the filter bar, for example after a back navigation,
             //an object with the content is handed over to this method. Now the developer has to ensure that the content of the custom filter is set to the control
@@ -55,19 +55,19 @@ sap.ui.define([
         },
 
         onCustomParams: function (sCustomParams) {
-            if (sCustomParams == 'Card06') {
-                return this.paramCard06.bind(this);
-            }
+            // if (sCustomParams == 'Card06' || sCustomParams == 'Card02' || sCustomParams == 'Card08') {
+            return this.paramCard.bind(this);
+            // }
         },
 
         getBasicParams(oNavigateParams, oSelectionVariantParams) {
 
             const basicParams = []
             const params = []
-    
+
             basicParams.forEach(b => {
                 const selParam = oSelectionVariantParams.getSelectOption(b)
-    
+
                 if (oNavigateParams[b]) {
                     params.push({
                         path: b,
@@ -76,7 +76,7 @@ sap.ui.define([
                         value2: '',
                         sign: 'I'
                     })
-    
+
                 } else {
                     if (selParam) {
                         selParam.forEach(p => {
@@ -103,19 +103,21 @@ sap.ui.define([
             return params
         },
 
-        paramCard06: function(oNavigateParams, oSelectionVariantParams) {
+        paramCard: function (oNavigateParams, oSelectionVariantParams) {
             const params = []
 
             const formatter = DateFormat.getDateInstance({ pattern: 'yyyyMMdd' })
             var dateFrom = this.oView.byId("CustomPeriod").getDateValue();
             var dateTo = this.oView.byId("CustomPeriod").getSecondDateValue();
 
-            params.push({
-                path: 'Period',
-                operator: 'EQ',
-                value1: `${formatter.format(dateFrom)}-${formatter.format(dateTo)}`,
-                sign: 'I'
-            })
+            if (dateFrom && dateTo) {
+                params.push({
+                    path: 'Period',
+                    operator: 'EQ',
+                    value1: `${formatter.format(dateFrom)}-${formatter.format(dateTo)}`,
+                    sign: 'I'
+                })
+            }
 
             return params
         }

@@ -251,7 +251,8 @@
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#NumberOfOpenWorkPermits",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
-                    "addODataSelect": true
+                    "addODataSelect": true,
+                    "customParams": "Card00"
                 }
             },
             "card01": {
@@ -267,7 +268,8 @@
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByProcessingStatus",
                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
-                    "addODataSelect": true
+                    "addODataSelect": true,
+                    "customParams": "Card01"
                 }
             },
             "card02": {
@@ -283,7 +285,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkCenter",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card02"
                 }
             },
             "card03": {
@@ -298,7 +301,8 @@
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#NumberOfOpenSftyCert",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
-                    "addODataSelect": true
+                    "addODataSelect": true,
+                    "customParams": "Card03"
                 }
             },
             "card04": {
@@ -314,7 +318,8 @@
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCByProcessingStatus",
                     "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
-                    "addODataSelect": true
+                    "addODataSelect": true,
+                    "customParams": "Card04"
                 }
             },
             "card05": {
@@ -330,7 +335,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCByWorkCenter",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card05"
                 }
             },
             "card06": {
@@ -363,7 +369,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card07"
                 }
             },
             "card08": {
@@ -377,7 +384,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card08"
                 }
             },
             "card09": {
@@ -393,7 +401,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card09"
                 }
             },
             "card10": {
@@ -409,7 +418,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card10"
                 }
             },
             "card11": {
@@ -425,7 +435,8 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortSCBySafetyCertificateType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus"
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "customParams": "Card11"
                 }
             }
         },
