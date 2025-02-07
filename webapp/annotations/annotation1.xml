@@ -16,6 +16,81 @@
             <Annotations Target="SAP.PmtToWrkOverviewPageFilterType/Period">
                 <Annotation Term="UI.Hidden" />
             </Annotations>
+
+            <Annotations Target="SAP.WorkPermitTypeToBeClosedType">
+                <Annotation Term="UI.SelectionVariant" Qualifier="Card06">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="SelectOptions">
+                            <Collection>
+                                <Record Type="UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="WorkPermitProcessingStatus" />
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS00" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS10" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS20" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS30" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS40" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS45" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS50" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS60" />
+                                            </Record>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                <PropertyValue Property="Low" String="PS70" />
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                                <Record Type="UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="WorkPermitReturned"/>
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                <PropertyValue Property="Low" String="2"/>
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

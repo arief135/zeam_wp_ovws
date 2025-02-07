@@ -30,7 +30,7 @@ server:
         backend:
           - path: /sap
             url: https://vhpuadwdwd01.sap.essa.id:44380
-            client: "110"
+            client: "120"
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
