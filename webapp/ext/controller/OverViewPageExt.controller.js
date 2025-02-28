@@ -55,9 +55,33 @@ sap.ui.define([
         },
 
         onCustomParams: function (sCustomParams) {
-            // if (sCustomParams == 'Card06' || sCustomParams == 'Card02' || sCustomParams == 'Card08') {
-            return this.paramCard.bind(this);
-            // }
+            if (sCustomParams == 'Card10') {
+                return function (oNavigateParams, oSelectionVariantParams) {
+                    const params = this.paramCard(oNavigateParams, oSelectionVariantParams)
+                    params.push({
+                        path: 'WorkPermitReturned',
+                        operator: 'EQ',
+                        value1: `2`,
+                        sign: 'I'
+                    })
+                    return params
+                }.bind(this)
+
+            } else if (sCustomParams == 'Card11' || sCustomParams == 'Card07') {
+                return function (oNavigateParams, oSelectionVariantParams) {
+                    const params = this.paramCard(oNavigateParams, oSelectionVariantParams)
+                    params.push({
+                        path: 'ReturnStatus',
+                        operator: 'EQ',
+                        value1: `Return`,
+                        sign: 'I'
+                    })
+                    return params
+                }.bind(this)
+
+            } else {
+                return this.paramCard.bind(this)
+            }
         },
 
         getBasicParams(oNavigateParams, oSelectionVariantParams) {
@@ -120,6 +144,7 @@ sap.ui.define([
             }
 
             return params
-        }
+        },
+
     }
 });

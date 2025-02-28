@@ -16,7 +16,7 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /sap
+          - path: /sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/
             url: https://vhpuadwdwd01.sap.essa.id:44380
             client: '110'
     - name: fiori-tools-appreload

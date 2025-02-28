@@ -20,6 +20,7 @@
                 <Property Name="Period" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:label="Valid from" sap:quickinfo="Valid-From Date for WCM Object" sap:creatable="false" sap:updatable="false" sap:semantics="yearmonthday"/>
                 <Property Name="Period_T" Type="Edm.String" MaxLength="10" sap:label="Valid from (Description)" sap:quickinfo="Valid-From Date for WCM Object" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
                 <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:label="Plant Section" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ReturnStatus" Type="Edm.String" MaxLength="60" sap:aggregation-role="dimension" sap:label="Short Description" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:aggregation-role="dimension" sap:label="Work Center" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:aggregation-role="dimension" sap:label="Application" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false"/>
@@ -64,6 +65,7 @@
                 <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReturnStatus" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
@@ -97,6 +99,7 @@
                 <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReturnStatus" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
@@ -129,6 +132,7 @@
                 <Property Name="Period" Type="Edm.String" MaxLength="10" sap:text="Period_T" sap:label="Valid from" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="Period_T" Type="Edm.String" sap:label="Valid from (Description)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="PlantSection" Type="Edm.String" MaxLength="3" sap:label="Plant Section" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ReturnStatus" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkCenter" Type="Edm.String" MaxLength="8" sap:label="Work Center" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="WorkPermit" Type="Edm.String" MaxLength="12" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
                 <Property Name="ZZ1_MAINTEVENT_WCM" Type="Edm.String" MaxLength="40" sap:label="MAINTEVENT" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>

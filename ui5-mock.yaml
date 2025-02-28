@@ -14,7 +14,7 @@ server:
             - /test-resources
           url: https://ui5.sap.com
         backend:
-          - path: /sap/opu/odata/sap/ZC_SCCMPLQRY_CDS/
+          - path: /sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/
             url: https://vhpuadwdwd01.sap.essa.id:44380
             client: "110"
     - name: fiori-tools-appreload
@@ -45,13 +45,13 @@ server:
             metadataXmlPath: ./webapp/localService/ZC_SCFILLQRY_CDS/metadata.xml
             mockdataRootPath: ./webapp/localService/ZC_SCFILLQRY_CDS/mockdata
           - urlPath: /sap/opu/odata/sap/ZC_WPCMPLQRY_CDS/
+            metadataPath: ./webapp/localService/ZC_WPCMPLQRY_CDS/metadata.xml
+            mockdataPath: ./webapp/localService/ZC_WPCMPLQRY_CDS/mockdata
             generateMockData: true
-            metadataXmlPath: ./webapp/localService/ZC_WPCMPLQRY_CDS/metadata.xml
-            mockdataRootPath: ./webapp/localService/ZC_WPCMPLQRY_CDS/mockdata
           - urlPath: /sap/opu/odata/sap/ZC_SCCMPLQRY_CDS/
-            metadataPath: ./webapp/localService/ZC_SCCMPLQRY_CDS/metadata.xml
-            mockdataPath: ./webapp/localService/ZC_SCCMPLQRY_CDS/mockdata
             generateMockData: true
+            metadataXmlPath: ./webapp/localService/ZC_SCCMPLQRY_CDS/metadata.xml
+            mockdataRootPath: ./webapp/localService/ZC_SCCMPLQRY_CDS/mockdata
         annotations:
           - localPath: ./webapp/localService/UI_PERMITTOWORKOVERVIEW/UI_PERMITTOWORKOVERVIEW_VAN.xml
             urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='UI_PERMITTOWORKOVERVIEW_VAN',Version='0001')/$value/
@@ -63,3 +63,7 @@ server:
             urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_WPCMPLQRY_CDS_VAN',Version='0001')/$value/
           - localPath: ./webapp/localService/ZC_SCCMPLQRY_CDS/ZC_SCCMPLQRY_CDS_VAN.xml
             urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZC_SCCMPLQRY_CDS_VAN',Version='0001')/$value/
+          - localPath: ./webapp/annotations/annotation1.xml
+            urlPath: annotations/annotation1.xml
+          - localPath: ./webapp/annotations/annotation2.xml
+            urlPath: annotations/annotation2.xml

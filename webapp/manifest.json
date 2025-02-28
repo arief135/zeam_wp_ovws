@@ -76,7 +76,8 @@
                 "type": "OData",
                 "settings": {
                     "annotations": [
-                        "ZC_WPCMPLQRY_CDS_VAN"
+                        "ZC_WPCMPLQRY_CDS_VAN",
+                        "annotation2"
                     ],
                     "localUri": "localService/ZC_WPCMPLQRY_CDS/metadata.xml",
                     "odataVersion": "2.0"
@@ -112,6 +113,13 @@
                 "uri": "annotations/annotation1.xml",
                 "settings": {
                     "localUri": "annotations/annotation1.xml"
+                }
+            },
+            "annotation2": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation2.xml",
+                "settings": {
+                    "localUri": "annotations/annotation2.xml"
                 }
             }
         }
@@ -418,7 +426,7 @@
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#SortWPByWorkPermitType",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Q1",
                     "kpiAnnotationPath": "com.sap.vocabularies.UI.v1.KPI#Q2",
-                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#ProcessingStatus",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Card10",
                     "customParams": "Card10"
                 }
             },
